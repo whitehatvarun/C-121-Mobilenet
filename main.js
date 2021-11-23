@@ -26,7 +26,7 @@ function setup() {
     //Write The gotResults() function
     if(error)
     {
-      console.error(error)
+      console.error(error);
     }
 
     else
@@ -38,7 +38,7 @@ function setup() {
 
          var synth = window.speechSynthesis;
          speak_data = "Object detected is -" + results[0].label;
-         var utterThis = new speechSynthesisUtterance(speak_data);
+         var utterThis = new SpeechSynthesisUtterance(speak_data);
          synth.speak(utterThis);         
          
          document.getElementById("Object_name").innerHTML = results[0].label;
